@@ -10,41 +10,31 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">REVIEW's blog</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'review' %}">Top Review <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'contact' %}">Contact <span class="sr-only">(current)</span></a>
-                </li>
+    <!-- Image and text -->
+    <div class="container">
+<nav class="navbar fixed-top navbar-light bg-light ">
+    <a class="navbar-brand" href="{% url 'index' %}">
+      <img src="static/image/1.svg" width="35" height="35" class="d-inline-block align-top" alt="" loading="lazy">
+      <div class="mx-auto">
+        <a  style="position:relative; font-size: 30px;"><b>EAT A LOT</b></a>
+      </div>
+    </a>
 
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}" style="color:black">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}" style="color:black">Contact us</a>
+        </li>
+      </ul>
+</nav></div>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
     {% block content %}
     {% endblock %}
+    <footer class="footer " style="width:100%; height:15%; background-color:rgba(26, 25, 25, 0.568);">
+      <div style="text-align:center; padding-top: 45px; margin-top:20px;">© 2020 EAT A LOT Website. Privacy Statement | Cookie Policy | Terms of Use | Advertising Notice | California Do Not Sell My Info | ChanananSuktad Institution.
+    </footer>
     <script src="{% static './lib/jquery/jquery-2.2.4.js' %}"></script>
     <script src="{% static './lib/popper/popper.min.js' %}"></script>
     <script src="{% static './lib/bootstrap/js/bootstrap.min.js' %}"></script>
